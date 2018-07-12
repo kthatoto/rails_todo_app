@@ -19,7 +19,15 @@
 .task {
   &__main {
     border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
   }
   &__console {
+    overflow: hidden;
+  }
+}
+.console {
+  &__item {
+    width: 50%;
+    float: left;
   }
 }

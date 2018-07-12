@@ -1,0 +1,12 @@
+ul.tasks__list
+  - tasks.each do |task|
+    li.tasks__item
+      .task__main
+        p = task.assignee
+        h3 = task.content
+      .task__console
+        .console__item = link_to "編集", [:edit, task]
+        .console__item = form_for task, html: { method: :patch, name: "form#{task.id}" } do |f|
+          = f.hidden_field :status, value: (current_status + 1) % 2
+          a href="javascript:document.form#{task.id}.submit()"
+            = ["DONEにする", "TODOにする"][current_status]

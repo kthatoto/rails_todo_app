@@ -3,19 +3,7 @@ h1 TODOアプリ
 
 .tasks__column
   h2 TODO
-  ul.tasks__list
-    - @todo_tasks.each do |task|
-      li.tasks__item
-        .task__main
-          p = task.assignee
-          h3 = task.content
-        .task__console
+  == render 'shared/task_list', tasks: @todo_tasks, current_status: 0
 .tasks__column
   h2 DONE
-  ul.tasks__list
-    - @done_tasks.each do |task|
-      li.tasks__item
-        .task__main
-          p = task.assignee
-          h3 = task.content
-        .task__console
+  == render 'shared/task_list', tasks: @done_tasks, current_status: 1
