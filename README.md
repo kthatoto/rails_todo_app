@@ -1,24 +1,8 @@
-# README
+# Rails Todo App1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Initialized
+`bundle exec rails new . -d postgresql -M -C --skip-coffee --skip-turbolinks`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Gems
+- `slim-rails`
+- `html2slim`
