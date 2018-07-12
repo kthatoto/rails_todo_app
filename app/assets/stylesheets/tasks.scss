@@ -10,4 +10,16 @@
     padding: 15px;
     background-color: #eee;
   }
+  &__item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+  }
+}
+.task {
+  &__main {
+    border-bottom: 1px solid #ccc;
+  }
+  &__console {
+  }
 }
