@@ -1,5 +1,13 @@
 .tasks {
   &__column {
-    width: 50%;
+    float: left;
+    width: calc(50% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+  }
+  &__list {
+    padding: 15px;
+    background-color: #eee;
   }
 }
