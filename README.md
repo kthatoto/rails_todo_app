@@ -1,4 +1,4 @@
-# Rails Todo App1
+# Rails Todo App
 
 ## Initialized
 `bundle exec rails new . -d postgresql -M -C --skip-coffee --skip-turbolinks`
