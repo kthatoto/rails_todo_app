@@ -7,8 +7,17 @@ class TasksController < ApplicationController
     @done_tasks = @all_tasks.where(status: :done)
   end
   def create
+    @task = Task.new(task_params)
+    if @task.save
+    else
+    end
+    redirect_to :root
   end
   def edit
+    @editing_task = Task.find_by(id: params[:id].to_i)
+    unless @editing_task
+      redirect_to :root
+    end
   end
   def update
     @task = Task.find_by(id: params[:id].to_i)
