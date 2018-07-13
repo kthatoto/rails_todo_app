@@ -3,4 +3,4 @@
   = f.text_field :assignee
   = f.label :content
   = f.text_field :content
-  = f.submit "#{ {index: "作成", edit: "更新"}[params[:action].to_sym] }"
+  = f.submit "#{ {index: "作成", edit: "更新", update: "更新"}[params[:action].to_sym] }"

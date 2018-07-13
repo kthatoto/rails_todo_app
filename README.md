@@ -6,3 +6,9 @@
 ## Gems
 - `slim-rails`
 - `html2slim`
+
+### flash list
+- success
+- info
+- warning
+- danger

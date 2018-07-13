@@ -9,7 +9,9 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
+      flash[:success] = "success：作成しました"
     else
+      flash[:warning] = "error：作成できませんでした"
     end
     redirect_to :root
   end
@@ -22,10 +24,16 @@ class TasksController < ApplicationController
   def update
     @task = Task.find_by(id: params[:id].to_i)
     unless @task
-      render :root
+      flash[:danger] = "error：不正な値です"
+      return render :root
     end
     if @task.update(task_params)
+      flash[:success] = "success：更新しました"
       redirect_to :root
+    else
+      @editing_task = @task
+      flash.now[:warning] = "error：更新できませんでした"
+      render 'edit'
     end
   end
   private
